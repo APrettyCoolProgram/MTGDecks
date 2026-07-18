@@ -11,6 +11,16 @@
 
 <div align="center">
 
+[Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
+</div>
+
+***
+
+## Overview
+
+<div align="center">
+
 |Deck||
 |:--|:--|
 |Archetype|Golgari Wurm Ramp|
@@ -20,16 +30,6 @@
 |Legalities|Brawl/Commander/Duel/Gladiator/Historic/Legacy/Oathbreaker/Timeless/Vintage|
 
 </div>
-
-<div align="center">
-
-[Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
-
-</div>
-
-***
-
-## Overview
 
 Wurmpocolypse is a black-green ramp deck built to make the game about oversized creatures. Cultivate and Gift of Paradise push the deck toward six, seven, and eight mana, where Ravenous Lindwurm, Pelakka Wurm, Sifter Wurm, Bookwurm, and Sandwurm Convergence can take over combat.
 
