@@ -69,7 +69,12 @@ Example:
 
 ### Deck Cover Art
 
-The deck cover art section should display the images of the deck's "Cover art" cards in a table format. Each image should be 240 pixels wide and fetched using the Scryfall card API/URLs. Only include the "Cover art" cards that are present in the decklist, with a maximum of 3 cards. This is a required element of the MTG Deck Page.
+The deck cover art section should display the images of the deck's "Cover art" cards in a table format.
+  * Each image should be 240 pixels wide
+  * Images should be fetched using the Scryfall card API/URLs
+  * Only include the "Cover art" cards that are present in the .deck file
+  * There is a maximum of 3 "Cover art" cards.
+  * If no "Cover art" cards are specified in the .deck file, this section should be omitted
 
 Example:
 ```html
@@ -82,13 +87,15 @@ Example:
 
 ### Deck Profile
 
-The helps readers quickly understand the deck's identity and how it intends to achieve victory by providing a concise overview of the deck's key characteristics. This is a required element of the MTG Deck Page. and should always include:
+This helps readers quickly understand the deck's identity and how it intends to achieve victory by providing a concise overview of the deck's key characteristics. This is a required element of the MTG Deck Page. and should always include:
 
 * Archetype
 * Primary colors
 * Strategy
 * Win conditions
-* Legalities (only include formats where the deck is legal)
+* Legalities
+  * Only include formats where the deck is legal
+  * Derive legality by intersecting legalities for all main-deck cards from `MTGDecks/.github/.do-not-commit/AllPrintings.json`; use "Not evaluated" if unavailable.
 
 Example:
 ```
@@ -174,7 +181,12 @@ Sideboard
 
 ### Key Cards
 
-The "key cards" section should display the images of the deck's "Key cards" cards in a table format. Each image should be 120 pixels wide and fetched using the Scryfall card API/URLs. Only include the "Key cards" that are present in the decklist, with a maximum of 6 cards. This is a required element of the MTG Deck Page.
+The "key cards" section should display the images of the deck's "Key cards" cards in a table format.
+  * Each image should be 120 pixels wide
+  * Images should be fetched using the Scryfall card API/URLs
+  * Only include the "Key cards" that are present in the .deck file
+  * There is a maximum of 6 "Key card" images
+  * If no "Key cards" are specified in the .deck file, this section should be omitted
 
 Descriptions for each of the cards should be included below the images, providing a brief explanation of their role or importance in the deck.
 
@@ -286,14 +298,14 @@ Example:
 <br>
 
 | Rarity | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Common |  |  |
 | Uncommon |  |  |
 | Rare |  |  |
 | Mythic Rare |  |  |
 
 | Creatures | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Elf |  |  |
 | Goblin |  |  |
 | Human |  |  |
@@ -301,7 +313,7 @@ Example:
 | Elemental |  |  |
 
 | Spells | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Interaction |  |  |
 | Burn |  |  |
 | Card Draw |  |  |
@@ -311,21 +323,21 @@ Example:
 | Recursion |  |  |
 
 | Sets | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Set 1 |  |  |
 | Set 2 |  |  |
 | Set 3 |  |  |
 | Set 4 |  |  |
 
 | Keywords | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Keyword 1 |  |  |
 | Keyword 2 |  |  |
 | Keyword 3 |  |  |
 | Keyword 4 |  |  |
 
 | Subtypes | # | % |
-|:--|:--|
+|:--|:--|:--|
 | Subtype 1 |  |  |
 | Subtype 2 |  |  |
 | Subtype 3 |  |  |
@@ -340,12 +352,12 @@ Example:
 These are required elements of the MTG Deck Page.
 
 1. A "Mana Curve" table that shows the distribution of cards by their mana value and color indicators.
-  * Do not include lands in the mana curve calculation.
+  * Do not include lands in the mana curve percentage calculation. The percentage should only reflect non-land cards.
 
-Exmample:
+Example:
 ```markdown
 | Mana Value | Mana Cost | # | % | Color |
-|:--:|:--|:--|:--|
+|:--:|:--|:--|:--|:--|
 | 0 |  | 0 | 0% | - |
 | 1 | ################## | 18 | 27.7% | 🔴 |
 | 2 | ################ | 16 | 24.6% | 🔴 |
@@ -385,8 +397,8 @@ This section contains:
 
 1. Potential improvements and adjustments. This section is not-collapsible, should be 1-2 paragraphs long, and should be easy for the reader to understand. This is a required element of the MTG Deck Page
 2. A collapsible "Sideboard Guide" for specific matchups and meta considerations. This is a required element of the MTG Deck Page
-  * There should be a recommended sideboard for each %DeckType% for popular matchups
-  * The %SideboardCardList% should reflect these recommendations, and contain the specific cards chosen to address each popular matchup.
+  * There should be a recommended sideboard for each %OpponentDeckType% for popular matchups
+  * The %SideboardCardList% should reflect these recommendations, and contain the specific legal cards chosen to address each popular matchup.
   * Each sideboard recommendation must contain exactly 15 cards
   * Sideboard recommendations should only include card lists, and not additional commentary or explanations.
 
@@ -400,7 +412,7 @@ If this list is tuned further, the first upgrades should be more sweepers for go
 <summary>Sideboard Guide</summary>
 <br>
 
-**Sideboard**: %DeckType%  
+**Sideboard**: %OpponentDeckType%  
 ```
 %SideboardCardList%
 ```
@@ -557,9 +569,9 @@ Sideboard
 
 <table align="center">
 <tr>
-<td><img src="https://cards.scryfall.io/large/front/3/c/3c43bf24-399e-407a-a563-bb04f93a0497.jpg?1783922427" alt="Demon Bolt" width="240" /></td>
-<td><img src="https://cards.scryfall.io/large/front/8/8/88b13bc0-da54-4c3b-917c-7c8345a329f5.jpg?1783902927" alt="Lightning Strike" width="240" /></td>
-<td><img src="https://cards.scryfall.io/large/front/e/c/ec66f169-5cf9-4d7c-a5ab-c64fc4801358.jpg?1783933426" alt="Jaya's Greeting" width="240" /></td>
+<td><img src="https://cards.scryfall.io/large/front/3/c/3c43bf24-399e-407a-a563-bb04f93a0497.jpg?1783922427" alt="Demon Bolt" width="120" /></td>
+<td><img src="https://cards.scryfall.io/large/front/8/8/88b13bc0-da54-4c3b-917c-7c8345a329f5.jpg?1783902927" alt="Lightning Strike" width="120" /></td>
+<td><img src="https://cards.scryfall.io/large/front/e/c/ec66f169-5cf9-4d7c-a5ab-c64fc4801358.jpg?1783933426" alt="Jaya's Greeting" width="120" /></td>
 </tr>
 </table>
 
@@ -672,9 +684,9 @@ Against control, the plan is less about sweeping and more about forcing them to 
 
 ### Colors
 
-| Color | Percentage |
-|:--:|:--:|
-| 🔴 | 100% |
+| Color | # | % |
+|:--:|:--:|:--:| 
+| 🔴 | 41 | 63.1% |
 
 <details>
 <summary>Additional mana details</summary>
