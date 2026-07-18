@@ -458,24 +458,24 @@ When generating the page:
 
 ## Quality Checklist
 
-Before finalizing a page, ensure it has the following components (as described above), and create any missing ones as needed:
+* Before finalizing a page, ensure it has the following components (as described above), and create any missing ones as needed:
+  * Deck Title
+  * Deck Summary
+  * Deck Cover Art
+  * Deck Profile
+  * Table of Contents
+  * Overview
+  * Decklist
+  * Key Cards
+  * Game Plan
+  * Details
+  * Mana
+  * Thoughts
+  * Versions
 
-* Deck Title
-* Deck Summary
-* Deck Cover Art
-* Deck Profile
-* Table of Contents
-* Overview
-* Decklist
-* Key Cards
-* Game Plan
-* Details
-* Mana
-* Thoughts
-* Versions
-
-The only emojis allowed are circular colors that indicate mana colors, such as 🔴, 🟢, and ⚫.
-
+* The only emojis allowed are circular colors that indicate mana colors, such as 🔴, 🟢, and ⚫.
+* Ensure that a blank line separates any HTML code from the surrounding Markdown content, otherwise the content will not display correctly.
+* Ensure that the Decklist is encapsulated within a code block using triple backticks (```) for proper formatting.
 
 ## Example
 
