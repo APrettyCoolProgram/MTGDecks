@@ -474,6 +474,9 @@ Before finalizing a page, ensure it has the following components (as described a
 * Thoughts
 * Versions
 
+The only emojis allowed are circular colors that indicate mana colors, such as 🔴, 🟢, and ⚫.
+
+
 ## Example
 
 Here is an example of a well-formatted MTG deck page.
