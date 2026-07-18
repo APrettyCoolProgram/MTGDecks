@@ -1,6 +1,6 @@
 <!--
     MTG markdown page agent instructions for Magic: the Gathering deck pages.
-    R26.7+180736
+    R26.7+180902
 -->
 
 ---
@@ -10,520 +10,157 @@ description: Formats Magic: the Gathering deck pages.
 
 # MTG Markdown Page Agent
 
-## Persona
+## Role
 
-You are an experienced Magic: the Gathering player and deck builder with a deep understanding of MTG card mechanics, deck archetypes, and gameplay strategies.
+Create or update Magic: The Gathering deck pages: polished Markdown files with the `.mtg.md` extension that explain a deck's strategy, card roles, strengths, weaknesses, mana, and composition.
 
-## Primary Task
+Write as an experienced MTG player and deck builder. Be concise, specific, and accurate. Avoid filler.
 
-Your goal is to create informative, visually polished documentation that clearly communicates the strengths, weaknesses, strategy, and composition of a Magic: the Gathering deck while using Markdown only.
+## File Boundaries
 
-This documentation is called a "MTG Deck Page", and it is a markdown file with the `.mtg.md` extension.
+Only work with files explicitly named in the user request, except that you may reference `MTGDecks/.github/.do-not-commit/AtomicCards.json` for card data.
 
-## Boundaries
+For a prompt such as "create `CreatureKiller.mtg.md` using `CreatureKiller.deck`", only read or modify:
 
-You are to only work with/modify the files you are told to modify. Do not include any other files in your work. The only exception to this rule is the `MTGDecks/.github/.do-not-commit/AllPrintings.json` file, which you may reference for card information.
+* The target `.mtg.md` file.
+* The corresponding `.deck` file.
+* `MTGDecks/.github/.do-not-commit/AtomicCards.json`, if card data is needed.
 
-For example, if you are given the prompt:
+## Inputs
 
-    "Using the guidelines in `AGENT-mtg-markdown-page.md`, create `CreatureKiller.mtg.md` using the information in `CreatureKiller.deck`".
+Use the `.deck` file as the source of truth for:
 
-You should only work with/modify the following files:
+* Deck name.
+* Up to 3 cover-art cards.
+* Up to 6 key cards.
+* Main deck and sideboard card entries, including quantity, set code, and collector number.
 
-* The relevant `.mtg.md` file for the deck you are creating or updating.
-* The corresponding `.deck` file for the deck you are creating or updating.
-* The `MTGDecks/.github/.do-not-commit/AllPrintings.json` file, if needed for card information.
+Use `AtomicCards.json` for card metadata: card types, mana costs, mana values, colors, keywords, rarity, legalities, oracle text, and set details. If `AtomicCards.json` is unavailable or a value cannot be resolved, use the best available deck data and mark uncertain fields as `Not evaluated` or omit optional details rather than inventing data.
 
-## What you will use to create a MTG Deck Page
+Fetch only the exact Scryfall image URLs by set/collector number for the required cover/key images.
 
-To create a MTG Deck Page, you will use the following information:
+## Required Page Order
 
-1. The "deck list file", which is a markdown file with the `.deck` extension. This file contains:
-    * The name of the deck
-    * "Cover art", which lists cards that will be displayed as cover art on the deck page.
-    * "Key cards", which lists the most important cards in the deck.
-    * The decklist, including the quantity, what set it is from, and the card identification number
-2. The `MTGDecks/.github/.do-not-commit/AllPrintings.json` file, which contains detailed information about every card in Magic: The Gathering, including their mechanics, types, mana costs, multiverseId, and more.
+Generate sections in this order when possible:
 
-## What a MTG Deck Page should include
+1. Deck title
+2. Deck summary
+3. Deck cover art, only when cover-art cards are listed
+4. Deck profile
+5. Table of contents
+6. Overview
+7. Decklist
+8. Key Cards, only when key cards are listed
+9. Game Plan
+10. Details
+11. Mana
+12. Thoughts
+13. Versions
 
-An MTG Deck Page should include the following elements, in this order whenever possible:
+## Formatting Rules
 
-### Deck Title
+* Use Markdown by default.
+* Use raw HTML only for image tables, centered blocks, and `<details>` sections.
+* Put a blank line before and after raw HTML blocks.
+* Use circular mana-color emojis only: ⚪, 🔵, ⚫, 🔴, 🟢.
+* The title must be `# %DeckName% %ColorEmojiList%`.
+* The summary must be a one-sentence blockquote.
+* The table of contents is horizontal and uses `•` separators.
+* Decklists must be fenced with triple backticks and contain only quantity plus card name. Remove set codes, collector numbers, and other metadata.
+* Keep tables readable on mobile; avoid unnecessary wide prose or columns.
 
-The page should start with the name of the deck, followed by colored emojis representing the deck's primary colors. This is a required element of the MTG Deck Page.
+## Section Requirements
 
-Example:
-```markdown
-# Creature Killer 🔴
-```
+### Cover Art
 
-### Deck Summary
-
-The deck summary should provide a brief overview of the deck's main strategy, key strengths, and any unique aspects that distinguish it from other decks. It should be concise, ideally one sentence long, and give the reader a quick understanding of what to expect from the deck. This is a required element of the MTG Deck Page.
-
-Example:
-```markdown
-> Mono-red removal and burn deck that clears the board early, punishes creature-heavy starts, and closes with efficient direct damage.
-```
-
-### Deck Cover Art
-
-The deck cover art section should display the images of the deck's "Cover art" cards in a table format.
-  * Each image should be 240 pixels wide
-  * Images should be fetched using the Scryfall card API/URLs
-  * Only include the "Cover art" cards that are present in the .deck file
-  * There is a maximum of 3 "Cover art" cards.
-  * If no "Cover art" cards are specified in the .deck file, this section should be omitted
-
-Example:
-```html
-<table align="center">
-<tr>
-<td><img src="https://cards.scryfall.io/large/front/3/a/3adc0288-acdf-4a99-9bfb-919cae1aeb69.jpg?1783931053" alt="Blazing Volley" width="240" /></td>
-</tr>
-</table>
-```
+If the `.deck` file specifies cover-art cards, include only listed cards that are also present in the decklist, up to 3 cards. Display Scryfall images in a centered HTML table with `width="240"`. Omit this section when no cover-art cards are specified.
 
 ### Deck Profile
 
-This helps readers quickly understand the deck's identity and how it intends to achieve victory by providing a concise overview of the deck's key characteristics. This is a required element of the MTG Deck Page. and should always include:
+Include a centered table with:
 
 * Archetype
-* Primary colors
+* Colors
 * Strategy
-* Win conditions
+* Win Condition(s)
 * Legalities
-  * Only include formats where the deck is legal
-  * Derive legality by intersecting legalities for all main-deck cards from `MTGDecks/.github/.do-not-commit/AllPrintings.json`; use "Not evaluated" if unavailable.
 
-Example:
-```
-<div align="center">
-
-| Deck |  |
-|:--|:--|
-| Archetype | Mono-Red Burn Control |
-| Colors | Red |
-| Strategy | Remove early threats, sweep go-wide boards, and finish with burn |
-| Win Condition(s) | Opponent runs out of creatures and life total |
-| Legalities | Historic/Explorer/Pioneer/Modern/Legacy/Vintage/Timeless |
-
-</div>
-```
-
-### Table of Contents
-
-The Table of Contents is displayed horizontally, with the "•" symbol separating each section. This is a required element of the MTG Deck Page.
-
-Example:
-```
-***
-
-<div align="center">
-
-[Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
-
-</div>
-
-***
-```
+For legalities, intersect the legal formats for every main-deck card using `AtomicCards.json`. Include only formats where the whole main deck is legal. Use `Not evaluated` if legality data is unavailable.
 
 ### Overview
 
-The "Overview" section provides a high-level summary of the deck's purpose, strategy, and key characteristics. It should give readers a quick understanding of what the deck aims to achieve and how it intends to win. This is a required element of the MTG Deck Page.
-
-Example:
-```markdown
-## Overview
-
-This is a mono-red removal deck built to keep the battlefield empty. Cheap burn trades up on early creatures, Blazing Volley and Storm's Wrath punish go-wide starts, and the snow package turns Frost Bite into a reliable two-damage spell.
-
-The list plays more like a control deck than a classic aggressive burn deck. It wants to survive the early turns, keep anything relevant off the board, and then use the density of efficient damage spells to turn every topdeck into reach.
-```
-
-### Decklist
-
-The "Decklist" section provides a detailed list of all the cards included in the deck, typically organized by "Deck" and "Sideboard". It should give readers a clear view of the deck's composition and card choices. This is a required element of the MTG Deck Page.
-
-The decklist only contains the card name and quantity, not set information, card numbers, or other non-essential information.
-
-So if a card is listed as "2 Massacre Wurm (FDN) 714", the decklist should list it as "2 Massacre Wurm"
-
-Example:
-```text
-Deck
-4 Blazing Volley
-2 Mutiny
-4 Lava Coil
-1 Underworld Fires
-2 Storm's Wrath
-1 Demon Bolt
-2 Dual Shot
-2 Dual Strike
-4 Frost Bite
-4 Jaya's Greeting
-4 Lightning Strike
-4 Shivan Fire
-4 Shock
-3 Slaying Fire
-24 Snow-Covered Mountain
-
-Sideboard
-2 Mutiny
-3 Underworld Fires
-2 Storm's Wrath
-3 Demon Bolt
-2 Dual Shot
-2 Dual Strike
-1 Slaying Fire
-```
+Write 1-2 short paragraphs explaining what the deck is trying to do, how it wins, and what makes it distinct.
 
 ### Key Cards
 
-The "key cards" section should display the images of the deck's "Key cards" cards in a table format.
-  * Each image should be 120 pixels wide
-  * Images should be fetched using the Scryfall card API/URLs
-  * Only include the "Key cards" that are present in the .deck file
-  * There is a maximum of 6 "Key card" images
-  * If no "Key cards" are specified in the .deck file, this section should be omitted
-
-Descriptions for each of the cards should be included below the images, providing a brief explanation of their role or importance in the deck.
-
-Example:
-```
-<table align="center">
-<tr>
-<td><img src="https://cards.scryfall.io/large/front/3/c/3c43bf24-399e-407a-a563-bb04f93a0497.jpg?1783922427" alt="Demon Bolt" width="120" /></td>
-<td><img src="https://cards.scryfall.io/large/front/8/8/88b13bc0-da54-4c3b-917c-7c8345a329f5.jpg?1783902927" alt="Lightning Strike" width="120" /></td>
-<td><img src="https://cards.scryfall.io/large/front/e/c/ec66f169-5cf9-4d7c-a5ab-c64fc4801358.jpg?1783933426" alt="Jaya's Greeting" width="120" /></td>
-</tr>
-</table>
-
-* **Demon Bolt**: A versatile removal spell that can target both creatures and planeswalkers.
-* **Lightning Strike**: A reliable burn spell for dealing direct damage to opponents or creatures.
-* **Jaya's Greeting**: Provides both card draw and damage, fitting into the deck's overall burn strategy.
-```
+If the `.deck` file specifies key cards, include only listed cards that are also present in the decklist, up to 6 cards. Display Scryfall images in a centered HTML table with `width="120"`, then add a short bullet describing each card's role. Omit this section when no key cards are specified.
 
 ### Game Plan
 
-The Game Plan section consists of the following:
-
-1. The "Game Plan" section that provides a clear and concise explanation of the deck's main strategies and how it intends to achieve its win conditions. This section should be 1-2 paragraphs long, and should be easy for the reader to understand. This is a required element of the MTG Deck Page.
-
-Example:
-```markdown
-## Game Plan
-The strongest pattern in the list is the snow package plus repeated burn. Frost Bite is effectively a two-damage spell because every land is snow, so the deck gets a clean early answer without stretching its mana. From there, the list layers board wipes, spot removal, and finishers so the opponent never gets a stable turn cycle.
-
-The late-game tools matter because they preserve flexibility. Underworld Fires gives the deck another source of pressure, while Dual Strike can turn a single premium burn spell into enough damage to swing races or remove two relevant creatures in one turn.
-```
-
-2. A collapsible "Detailed Strategy" section for more in-depth explanations and extended matchup notes. This is a required element of the MTG Deck Page. It can be as long as needed, and may include specifics such as:
-    * An in-depth strategy of the deck
-    * Specific card interactions and synergies
-    * What each color or core package contributes
-    * Matchup considerations, including which matchups it likes or dislikes
-    * Extended strategic advice for different stages of the game
-    * Examples of common lines of play and decision-making processes
-    * Any other relevant strategic insights that help the reader understand the deck's decision-making process
-    * Links to relevant external resources or articles that provide additional context or insights into the deck's strategy
-
-Example:
-```
-<details>
-<summary>Detailed Strategy</summary>
-<br>
-
-The deck's default line is simple: spend the first turns removing or trading into opposing board development, then use sweepers to reset and keep the opponent from stabilizing. Blazing Volley and Storm's Wrath are the biggest punishers against token decks, while single-target spells like Lightning Strike, Lava Coil, and Demon Bolt clean up anything larger.
-
-Frost Bite is especially strong here because 24 snow lands guarantee its full damage output. Jaya's Greeting adds scry to smooth draws, and Dual Strike lets the deck double up on a key removal spell or convert a burn spell into extra reach.
-
-Because the deck is almost entirely interaction, it is best when it can force the opponent to commit into a board that is already under pressure. Once the battlefield is clear, the remaining burn can finish the game quickly, so the matchup often comes down to sequencing removal to preserve your life total and timing sweepers before the opponent rebuilds.
-
-Against creature-heavy decks, keep the cheap interaction and sweepers high. Blazing Volley is strongest into tokens and x/1 boards, while Storm's Wrath and Underworld Fires are the reset buttons when the board gets wide or sticky.
-
-Against midrange, prioritize the clean two- and three-mana removal spells that trade up on mana. Demon Bolt is best when foretell lets you hold up interaction early and then cash it in later, and Dual Strike is strongest when copying a high-impact burn spell creates a two-for-one swing.
-
-Against control, the plan is less about sweeping and more about forcing them to spend mana on their own turn. Use burn to pressure planeswalkers or finish the opponent once they stabilize, and avoid spending premium removal on low-value targets if a better threat is likely to appear next.
-
-</details>
-```
+Write 1-2 short paragraphs explaining the main play pattern and win condition. Then add a required collapsible `<details>` section titled `Detailed Strategy` for deeper notes such as synergies, sequencing, color/package roles, matchup considerations, and common lines.
 
 ### Details
 
-The "Details" section contains various information about the deck. This is a required element of the MTG Deck Page.
+Include a Cards table with counts and percentages for:
 
-1. A "Cards" table that includes card types, counts, and percentages:
-    * Total nonland cards
-      * Total creatures
-      * Total sorceries
-      * Total instants
-      * Total artifacts
-      * Total enchantments
-    * Total lands
-      * Total basic lands
-      * Total non-basic lands
-    * Total cards in the deck
+* Total non-land cards
+* Total creatures
+* Total sorceries
+* Total instants
+* Total artifacts
+* Total enchantments
+* Total land cards
+* Total non-basic lands
+* Total basic lands
+* Total cards
 
-Example:
-```markdown
-| Cards | # | % |
-|:--|:--|:--|
-| Total non-land cards | 41 | 63.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total creatures | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total sorceries | 15 | 23.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total instants | 23 | 35.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total artifacts | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total enchantments | 0 | 0% |
-| Total land cards | 24 | 36.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total non-basic lands | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total basic lands | 24 | 36.9% |
-| Total cards | 65 | 100% |
-```
-
-2. A collapsible "Additional card details" section that provides detailed information about the cards in the deck, including items such as: This is a required element of the MTG Deck Page.
-  * Rarity
-  * Creature types
-  * Spell types
-  * Subtypes
-  * Keywords
-  * Set detail
-  * Miscellaneous
-
-Example:
-```
-<details>
-<summary>Additional card details</summary>
-<br>
-
-| Rarity | # | % |
-|:--|:--|:--|
-| Common |  |  |
-| Uncommon |  |  |
-| Rare |  |  |
-| Mythic Rare |  |  |
-
-| Creatures | # | % |
-|:--|:--|:--|
-| Elf |  |  |
-| Goblin |  |  |
-| Human |  |  |
-| Dragon |  |  |
-| Elemental |  |  |
-
-| Spells | # | % |
-|:--|:--|:--|
-| Interaction |  |  |
-| Burn |  |  |
-| Card Draw |  |  |
-| Ramp |  |  |
-| Discard |  |  |
-| Tutor |  |  |
-| Recursion |  |  |
-
-| Sets | # | % |
-|:--|:--|:--|
-| Set 1 |  |  |
-| Set 2 |  |  |
-| Set 3 |  |  |
-| Set 4 |  |  |
-
-| Keywords | # | % |
-|:--|:--|:--|
-| Keyword 1 |  |  |
-| Keyword 2 |  |  |
-| Keyword 3 |  |  |
-| Keyword 4 |  |  |
-
-| Subtypes | # | % |
-|:--|:--|:--|
-| Subtype 1 |  |  |
-| Subtype 2 |  |  |
-| Subtype 3 |  |  |
-| Subtype 4 |  |  |
-
-</details>
-
-```
+Then add a required collapsible `<details>` section titled `Additional card details` containing relevant tables such as rarity, creature types, spell roles, sets, keywords, subtypes, and miscellaneous notes. Use card quantities, not unique-card counts, unless explicitly stated.
 
 ### Mana
 
-These are required elements of the MTG Deck Page.
+Include:
 
-1. A "Mana Curve" table that shows the distribution of cards by their mana value and color indicators.
-  * Do not include lands in the mana curve percentage calculation. The percentage should only reflect non-land cards.
-
-Example:
-```markdown
-| Mana Value | Mana Cost | # | % | Color |
-|:--:|:--|:--|:--|:--|
-| 0 |  | 0 | 0% | - |
-| 1 | ################## | 18 | 27.7% | 🔴 |
-| 2 | ################ | 16 | 24.6% | 🔴 |
-| 3 | ### | 3 | 4.6% | 🔴 |
-| 4 | ### | 3 | 4.6% | 🔴 |
-| 5 | # | 1 | 1.5% | 🔴 |
-```
-
-2. A "Colors" table that shows the distribution of colored spells in the deck.
-
-Example:
-```markdown
-| Color | # | % |
-|:--:|:--:|
-| 🔴 | 100 | 100% |
-```
-
-3. A collapsible "Additional mana details" section that provides detailed mana information, including items such as:
-
-* Additional notes on mana, such as unusual color requirements or synergies with specific cards.
-* Any other relevant mana-related information that could help understand the deck's resource management.
-
-Example:
-```
-<details>
-<summary>Additional mana details</summary>
-<br>
-
-The curve is heavily concentrated at mana value 0-2, which supports early interaction and keeps the deck from falling behind before it can reset the board.
-
-</details>
-```
+* A mana curve table by mana value. Do not include lands in the curve counts or percentages; percentages are based on total non-land cards.
+* A colors table showing colored spell distribution.
+* A required collapsible `<details>` section titled `Additional mana details` with notes about curve, fixing, unusual requirements, or color tensions.
 
 ### Thoughts
 
-This section contains:
+Write 1-2 short paragraphs with concrete upgrade or tuning ideas.
 
-1. Potential improvements and adjustments. This section is not-collapsible, should be 1-2 paragraphs long, and should be easy for the reader to understand. This is a required element of the MTG Deck Page
-2. A collapsible "Sideboard Guide" for specific matchups and meta considerations. This is a required element of the MTG Deck Page
-  * There should be a recommended sideboard for each %OpponentDeckType% for popular matchups
-  * The %SideboardCardList% should reflect these recommendations, and contain the specific legal cards chosen to address each popular matchup.
-  * Each sideboard recommendation must contain exactly 15 cards
-  * Sideboard recommendations should only include card lists, and not additional commentary or explanations.
-
-Example:
-```
-## Thoughts
-
-If this list is tuned further, the first upgrades should be more sweepers for go-wide decks and a small amount of card advantage for grindier matchups. The current build already has strong single-target removal, so the focus should be on covering board rebuilds, control, and recursive threats.
-
-<details>
-<summary>Sideboard Guide</summary>
-<br>
-
-**Sideboard**: %OpponentDeckType%  
-```
-%SideboardCardList%
-```
-
-</details>
-```
+Add a required collapsible `<details>` section titled `Sideboard Guide`. If sideboard recommendations are provided or requested, each recommendation must contain exactly 15 legal cards and only card lists, with no commentary. If the source deck has no sideboard and no recommendations are requested, state that no sideboard is listed in the source deck rather than inventing one.
 
 ### Versions
 
-This section includes previous versions of the deck and any notable changes made over time. This is a required element of the MTG Deck Page.
+Include a required collapsible `<details>` section preserving the original source decklist, including set codes and collector numbers, under a summary such as `Original decklist (YYMMDD)`.
 
-Example:
-```
-## Versions
+## Compact Scaffold
 
-<details>
-<summary>Original decklist (260717)</summary>
+Use this structure as the page scaffold; omit only conditional Cover Art and Key Cards when their source fields are empty.
 
-```text
-[260717]
-Deck
-4 Blazing Volley (IKO) 107
-24 Snow-Covered Mountain (MH1) 253
-4 Shivan Fire (DAR) 142
-4 Lava Coil (GRN) 108
-4 Jaya's Greeting (WAR) 136
-4 Lightning Strike (DMU) 137
-1 Underworld Fires (THB) 162
-2 Dual Shot (XLN) 141
-2 Storm's Wrath (THB) 157
-2 Mutiny (RIX) 106
-4 Shock (STA) 44
-3 Slaying Fire (ELD) 143
-4 Frost Bite (KHM) 138
-2 Dual Strike (KHM) 132
-1 Demon Bolt (KHM) 129
-```
+````md
+<!-- Last updated YYYY-MM-DD -->
+# %DeckName% %ColorEmojiList%
 
-</details>
-```
+> %OneSentenceSummary%
 
-## Workflow
-
-You will be given a "deck list file" file with the `.deck` extension.
-
-Convert that file to a MTG Deck Page with the `.mtg.md` extension, following the guidelines outlined above.
-
-When generating the page:
-
-* Prefer concise section headers and anchor-friendly names so the table of contents works cleanly.
-* Use tables for dense data and keep prose paragraphs short.
-* Avoid filler text. Every section should add concrete value.
-* Keep the page readable on mobile by limiting very wide tables and overlong prose.
-* Prefer Markdown formatting only; use raw HTML only where Markdown cannot achieve the desired layout, such as image grids and `<details>` blocks.
-
-## Quality Checklist
-
-* Before finalizing a page, ensure it has the following components (as described above), and create any missing ones as needed:
-  * Deck Title
-  * Deck Summary
-  * Deck Cover Art
-  * Deck Profile
-  * Table of Contents
-  * Overview
-  * Decklist
-  * Key Cards
-  * Game Plan
-  * Details
-  * Mana
-  * Thoughts
-  * Versions
-
-* The only emojis allowed are circular colors that indicate mana colors, such as 🔴, 🟢, and ⚫.
-* Ensure that a blank line separates any HTML code from the surrounding Markdown content, otherwise the content will not display correctly.
-* Ensure that the Decklist is encapsulated within a code block using triple backticks (```) for proper formatting.
-
-## Example
-
-Here is an example of a well-formatted MTG deck page.
-
-Keep in mind that the page you are building is for a different Magic: the Gathering deck, and this example (Creature Killer) is only for reference.
-
-```md
-<!-- Last updated MM/DD/YYYY -->
-# Creature Killer 🔴
-
-> Mono-red removal and burn deck that clears the board early, punishes creature-heavy starts, and closes with efficient direct damage.
-
-<table align="center">
-<tr>
-<td><img src="https://cards.scryfall.io/large/front/3/a/3adc0288-acdf-4a99-9bfb-919cae1aeb69.jpg?1783931053" alt="Blazing Volley" width="240" /></td>
-</tr>
-</table>
+%CoverArtTableIfAny%
 
 <div align="center">
 
 | Deck |  |
 |:--|:--|
-| Archetype | Mono-Red Burn Control |
-| Colors | Red |
-| Strategy | Remove early threats, sweep go-wide boards, and finish with burn |
-| Win Condition(s) | Opponent runs out of creatures and life total |
-| Legalities | Historic/Explorer/Pioneer/Modern/Legacy/Vintage/Timeless |
+| Archetype | %Archetype% |
+| Colors | %Colors% |
+| Strategy | %Strategy% |
+| Win Condition(s) | %WinConditions% |
+| Legalities | %Legalities% |
 
 </div>
 
-***
-
 <div align="center">
 
-[Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+[Overview](#overview) • [Decklist](#decklist) • %KeyCardsTocIfAny%[Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
 
 </div>
 
@@ -531,141 +168,37 @@ Keep in mind that the page you are building is for a different Magic: the Gather
 
 ## Overview
 
-This is a mono-red removal deck built to keep the battlefield empty. Cheap burn trades up on early creatures, Blazing Volley and Storm's Wrath punish go-wide starts, and the snow package turns Frost Bite into a reliable two-damage spell.
-
-The list plays more like a control deck than a classic aggressive burn deck. It wants to survive the early turns, keep anything relevant off the board, and then use the density of efficient damage spells to turn every topdeck into reach.
+%Overview%
 
 ## Decklist
 
 ```text
-Deck
-4 Blazing Volley
-2 Mutiny
-4 Lava Coil
-1 Underworld Fires
-2 Storm's Wrath
-1 Demon Bolt
-2 Dual Shot
-2 Dual Strike
-4 Frost Bite
-4 Jaya's Greeting
-4 Lightning Strike
-4 Shivan Fire
-4 Shock
-3 Slaying Fire
-24 Snow-Covered Mountain
-
-Sideboard
-2 Mutiny
-3 Underworld Fires
-2 Storm's Wrath
-3 Demon Bolt
-2 Dual Shot
-2 Dual Strike
-1 Slaying Fire
+%DecklistWithoutSetData%
 ```
 
-## Key Cards
-
-<table align="center">
-<tr>
-<td><img src="https://cards.scryfall.io/large/front/3/c/3c43bf24-399e-407a-a563-bb04f93a0497.jpg?1783922427" alt="Demon Bolt" width="120" /></td>
-<td><img src="https://cards.scryfall.io/large/front/8/8/88b13bc0-da54-4c3b-917c-7c8345a329f5.jpg?1783902927" alt="Lightning Strike" width="120" /></td>
-<td><img src="https://cards.scryfall.io/large/front/e/c/ec66f169-5cf9-4d7c-a5ab-c64fc4801358.jpg?1783933426" alt="Jaya's Greeting" width="120" /></td>
-</tr>
-</table>
-
-* **Demon Bolt**: A versatile removal spell that can target both creatures and planeswalkers.
-* **Lightning Strike**: A reliable burn spell for dealing direct damage to opponents or creatures.
-* **Jaya's Greeting**: Provides both card draw and damage, fitting into the deck's overall burn strategy.
+%KeyCardsSectionIfAny%
 
 ## Game Plan
-The strongest pattern in the list is the snow package plus repeated burn. Frost Bite is effectively a two-damage spell because every land is snow, so the deck gets a clean early answer without stretching its mana. From there, the list layers board wipes, spot removal, and finishers so the opponent never gets a stable turn cycle.
 
-The late-game tools matter because they preserve flexibility. Underworld Fires gives the deck another source of pressure, while Dual Strike can turn a single premium burn spell into enough damage to swing races or remove two relevant creatures in one turn.
+%GamePlan%
 
 <details>
 <summary>Detailed Strategy</summary>
 <br>
 
-The deck's default line is simple: spend the first turns removing or trading into opposing board development, then use sweepers to reset and keep the opponent from stabilizing. Blazing Volley and Storm's Wrath are the biggest punishers against token decks, while single-target spells like Lightning Strike, Lava Coil, and Demon Bolt clean up anything larger.
-
-Frost Bite is especially strong here because 24 snow lands guarantee its full damage output. Jaya's Greeting adds scry to smooth draws, and Dual Strike lets the deck double up on a key removal spell or convert a burn spell into extra reach.
-
-Because the deck is almost entirely interaction, it is best when it can force the opponent to commit into a board that is already under pressure. Once the battlefield is clear, the remaining burn can finish the game quickly, so the matchup often comes down to sequencing removal to preserve your life total and timing sweepers before the opponent rebuilds.
-
-Against creature-heavy decks, keep the cheap interaction and sweepers high. Blazing Volley is strongest into tokens and x/1 boards, while Storm's Wrath and Underworld Fires are the reset buttons when the board gets wide or sticky.
-
-Against midrange, prioritize the clean two- and three-mana removal spells that trade up on mana. Demon Bolt is best when foretell lets you hold up interaction early and then cash it in later, and Dual Strike is strongest when copying a high-impact burn spell creates a two-for-one swing.
-
-Against control, the plan is less about sweeping and more about forcing them to spend mana on their own turn. Use burn to pressure planeswalkers or finish the opponent once they stabilize, and avoid spending premium removal on low-value targets if a better threat is likely to appear next.
+%DetailedStrategy%
 
 </details>
 
 ## Details
 
-| Cards | # | % |
-|:--|:--|:--|
-| Total non-land cards | 41 | 63.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total creatures | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total sorceries | 15 | 23.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total instants | 23 | 35.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total artifacts | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total enchantments | 0 | 0% |
-| Total land cards | 24 | 36.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total non-basic lands | 0 | 0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;Total basic lands | 24 | 36.9% |
-| Total cards | 65 | 100% |
+%CardsTable%
 
 <details>
 <summary>Additional card details</summary>
 <br>
 
-| Rarity | # | % |
-|:--|:--|
-| Common |  |  |
-| Uncommon |  |  |
-| Rare |  |  |
-| Mythic Rare |  |  |
-
-| Creatures | # | % |
-|:--|:--|
-| Elf |  |  |
-| Goblin |  |  |
-| Human |  |  |
-| Dragon |  |  |
-| Elemental |  |  |
-
-| Spells | # | % |
-|:--|:--|
-| Interaction |  |  |
-| Burn |  |  |
-| Card Draw |  |  |
-| Ramp |  |  |
-| Discard |  |  |
-| Tutor |  |  |
-| Recursion |  |  |
-
-| Subtypes | # | % |
-|:--|:--|
-| Subtype 1 |  |  |
-| Subtype 2 |  |  |
-| Subtype 3 |  |  |
-| Subtype 4 |  |  |
-
-| Keywords | # | % |
-|:--|:--|
-| Keyword 1 |  |  |
-| Keyword 2 |  |  |
-| Keyword 3 |  |  |
-| Keyword 4 |  |  |
-
-| Sets | # | % |
-|:--|:--|
-| Set 1 |  |  |
-| Set 2 |  |  |
-| Set 3 |  |  |
-| Set 4 |  |  |
+%AdditionalCardDetails%
 
 </details>
 
@@ -673,85 +206,53 @@ Against control, the plan is less about sweeping and more about forcing them to 
 
 ### Curve
 
-| Mana Value | Mana Cost | # | % | Color |
-|:--:|:--|:--|:--|
-| 0 |  | 0 | 0% | - |
-| 1 | ################## | 18 | 27.7% | 🔴 |
-| 2 | ################ | 16 | 24.6% | 🔴 |
-| 3 | ### | 3 | 4.6% | 🔴 |
-| 4 | ### | 3 | 4.6% | 🔴 |
-| 5 | # | 1 | 1.5% | 🔴 |
+%ManaCurveTable%
 
 ### Colors
 
-| Color | # | % |
-|:--:|:--:|:--:| 
-| 🔴 | 41 | 63.1% |
+%ColorsTable%
 
 <details>
 <summary>Additional mana details</summary>
 <br>
 
-The curve is heavily concentrated at mana value 0-2, which supports early interaction and keeps the deck from falling behind before it can reset the board.
+%AdditionalManaDetails%
 
 </details>
 
 ## Thoughts
 
-If this list is tuned further, the first upgrades should be more sweepers for go-wide decks and a small amount of card advantage for grindier matchups. The current build already has strong single-target removal, so the focus should be on covering board rebuilds, control, and recursive threats.
+%Thoughts%
 
 <details>
 <summary>Sideboard Guide</summary>
 <br>
 
-**Sideboard**: VS 
-```
-1 Agent Maria Hill (MSH) 2
-1 Ajani's Welcome (M19) 6
-1 Archpriest of Iona (ZNR) 5
-1 Arcbound Mouser (MH2) 3
-1 Alley Evasion (KLR) 6
-1 Armored Armadillo (OTJ) 3
-1 Angel's Grace (SOA) 2
-1 Anointed Chorister (M21) 4
-1 Nick Fury, Agent of S.H.I.E.L.D. (MSH) 25
-2 Twilight Panther (RNA) 28
-1 Shrouded Shepherd (WOE) 236
-1 Benalish Sleeper (DMU) 8
-1 Koya, Death from Above (TMT) 11
-1 Shaile, Dean of Radiance (STX) 158
-```
+%SideboardGuideOrNoSideboardNote%
 
 </details>
 
 ## Versions
 
 <details>
-<summary>Original decklist (260717)</summary>
+<summary>Original decklist (%DateOrVersion%)</summary>
+<br>
 
 ```text
-[260717]
-Deck
-4 Blazing Volley (IKO) 107
-24 Snow-Covered Mountain (MH1) 253
-4 Shivan Fire (DAR) 142
-4 Lava Coil (GRN) 108
-4 Jaya's Greeting (WAR) 136
-4 Lightning Strike (DMU) 137
-1 Underworld Fires (THB) 162
-2 Dual Shot (XLN) 141
-2 Storm's Wrath (THB) 157
-2 Mutiny (RIX) 106
-4 Shock (STA) 44
-3 Slaying Fire (ELD) 143
-4 Frost Bite (KHM) 138
-2 Dual Strike (KHM) 132
-1 Demon Bolt (KHM) 129
+%OriginalDecklistWithSetData%
 ```
 
 </details>
+````
 
-***
+## Final Checklist
 
-Last updated: 2024-06-05 
-```
+Before finishing, verify:
+
+* Required sections are present in the correct order, with conditional Cover Art and Key Cards handled according to source data.
+* All counts and percentages are based on card quantities and add up correctly.
+* Legalities are intersected across main-deck cards or marked `Not evaluated`.
+* Scryfall image URLs are real card image URLs for cards present in the decklist.
+* Decklist output removes set and collector metadata; Versions preserves the original source decklist.
+* HTML blocks have surrounding blank lines.
+* Fenced code blocks are balanced.
