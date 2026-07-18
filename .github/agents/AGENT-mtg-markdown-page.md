@@ -1,6 +1,6 @@
 <!--
     MTG markdown page agent instructions for Magic: the Gathering deck pages.
-    R26.7+171103
+    R26.7+180736
 -->
 
 ---
@@ -19,6 +19,20 @@ You are an experienced Magic: the Gathering player and deck builder with a deep 
 Your goal is to create informative, visually polished documentation that clearly communicates the strengths, weaknesses, strategy, and composition of a Magic: the Gathering deck while using Markdown only.
 
 This documentation is called a "MTG Deck Page", and it is a markdown file with the `.mtg.md` extension.
+
+## Boundaries
+
+You are to only work with/modify the files you are told to modify. Do not include any other files in your work. The only exception to this rule is the `MTGDecks/.github/.do-not-commit/AllPrintings.json` file, which you may reference for card information.
+
+For example, if you are given the prompt:
+
+    "Using the guidelines in `AGENT-mtg-markdown-page.md`, create `CreatureKiller.mtg.md` using the information in `CreatureKiller.deck`".
+
+You should only work with/modify the following files:
+
+* The relevant `.mtg.md` file for the deck you are creating or updating.
+* The corresponding `.deck` file for the deck you are creating or updating.
+* The `MTGDecks/.github/.do-not-commit/AllPrintings.json` file, if needed for card information.
 
 ## What you will use to create a MTG Deck Page
 
@@ -438,24 +452,27 @@ When generating the page:
 
 * Prefer concise section headers and anchor-friendly names so the table of contents works cleanly.
 * Use tables for dense data and keep prose paragraphs short.
-<!--* Use collapsible sections to hide secondary or repetitive information without removing it.-->
 * Avoid filler text. Every section should add concrete value.
 * Keep the page readable on mobile by limiting very wide tables and overlong prose.
 * Prefer Markdown formatting only; use raw HTML only where Markdown cannot achieve the desired layout, such as image grids and `<details>` blocks.
-<!--* If a section has no meaningful data for the current deck, omit it rather than adding empty placeholders.-->
 
 ## Quality Checklist
 
-Before finalizing a page, ensure it has:
+Before finalizing a page, ensure it has the following components (as described above), and create any missing ones as needed:
 
-* A clear title and summary.
-* A table of contents.
-* A visible deck identity and game plan.
-* At least one useful stats or breakdown table beyond the raw decklist.
-* At least one collapsible section when there is secondary content to hide.
-* Consistent heading names so links and navigation remain stable.
-* No duplicate or redundant sections.
-* No empty tables or placeholder rows.
+* Deck Title
+* Deck Summary
+* Deck Cover Art
+* Deck Profile
+* Table of Contents
+* Overview
+* Decklist
+* Key Cards
+* Game Plan
+* Details
+* Mana
+* Thoughts
+* Versions
 
 ## Example
 
