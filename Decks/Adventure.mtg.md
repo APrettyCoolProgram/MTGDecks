@@ -11,6 +11,16 @@
 
 <div align="center">
 
+[Overview](#overview) • [Decklist](#decklist) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
+</div>
+
+***
+
+## Overview
+
+<div align="center">
+
 |Deck||
 |:--|:--|
 |Archetype|Azorius Adventure Tempo|
@@ -20,16 +30,6 @@
 |Legalities|Historic/Timeless/Legacy/Vintage|
 
 </div>
-
-<div align="center">
-
-[Overview](#overview) • [Decklist](#decklist) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
-
-</div>
-
-***
-
-## Overview
 
 Adventure is built around creatures that double as spells. The early game uses Faerie Guidemother, Giant Killer, Silverflame Squire, Ardenvale Tactician, and Hypnotic Sprite to trade mana efficiently while still leaving behind bodies for later turns.
 
