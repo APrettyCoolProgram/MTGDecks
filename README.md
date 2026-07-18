@@ -1,12 +1,12 @@
 <!--
-  README.md template for source code repositories.
+  README.md template for collection repositories.
 -->
 
 <!-- [PROJECT WARNING] =========================================================
 * Project warning
 ---------------------------------------------------------------------------- -->
 
-> [!WARNING]
+> [!WARNING]  
 > This is a warning everyone should see, or remove this section entirely.
 
 <!--
@@ -37,13 +37,9 @@ not using the this section, comment this divider out.
     <img alt="Fallback image description" src=".github/logo/light/repository-logo.jpg">
   </picture>
 
-  <h1>Source Code Repository README.md Template</h1>
+  <h1>Collection README.md template</h1>
 
-  ![RELEASE](https://img.shields.io/badge/release\/version-YY.MM.0.0-teal)&nbsp;
-  ![STAGE](https://img.shields.io/badge/ALPHA/BETA-red)&nbsp; <!-- Alpha = Red, Beta = Yellow, Stable = Green -->
-  ![LICENSE](https://img.shields.io/badge/License-apache-blue)&nbsp;
-  ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
-  ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/Release-XX.xx-teal)&nbsp;&nbsp;
 
   <h3>Catchrphrase goes here!</h3>
 
@@ -102,16 +98,11 @@ not using the this section, comment this divider out.
   horizontal menu.
 ---------------------------------------------------------------------------- -->
 
-| CONTENTS                                    |
-|---------------------------------------------|
-| [About%ProjectName%](#about-%ProjectName%) |
-| [How it works](#how-it-works)               |
-| [Getting started](#getting-started)         |
-| [Installing](#installing)                   |
-| [Usage](#usage)                             |
-| [Acknowledgements](#acknowledgements)       |
-| [Related projects](#related-projects)       |
-| [License](#license)                         |
+| CONTENTS             |
+|----------------------|
+| [Topic #1](#topic-1) |
+| [Topic #2](#topic-2) |
+| [Topic #3](#topic-3) |
 
 <!--
 This divider separates the this section from the rest of the README. If you are
@@ -138,175 +129,8 @@ not using the this section, comment this divider out.
 
 <!-- ===================================================== [PROJECT MESSAGE] -->
 
-<!-- [ABOUT] ===================================================================
-* About %ProjectName%
-  Describes the project in a few sentences
-* Features
-  List of project features
-* What's new
-  A summary of what's new in the latest release
----------------------------------------------------------------------------- -->
+## Topic #1
 
-## About %ProjectName%
+## Topic #2
 
-A brief description of the project, what it does, and who it's for. This should
-be a concise summary that gives readers a clear understanding of the project's
-purpose and value proposition.
-
-### Features
-
-* Feature — What it does and why it matters.
-* Feature — What it does and why it matters.
-* Feature — What it does and why it matters.
-
-<!-- =============================================================== [ABOUT] -->
-
-<!-- [HOW IT WORKS] ============================================================
-* How it works
-  A high-level overview of how the project works.
-============================================================================= -->
-
-## How it works
-
-A blurb describing how the project works at a high level.
-
-<!-- ========================================================= [HOW IT WORKS] -->
-
-<!-- [GETTING STARTED] =========================================================
-* Before you begin
-  Any prerequisites, assumptions, or other information a user should know before
-  getting started.
-* Prerequisites/Requirements
-  List of software, hardware, or other requirements.
-
-  If this section is only comprised of prerequisites, it can be merged with the
-  About section.
-============================================================================ -->
-
-## Getting started
-
-A quick overview of how to get started with the project.
-
-### Before you begin
-
-Any assumptions, or other information a user should know before
-
-### Requirements
-
-| Requirement | Minimum version | Notes |
-|-------------|-----------------|-------|
-| Requirement |                 |       |
-| Requirement |                 |       |
-| Requirement |                 |       |
-
-<!-- [INSTALLING] =========================================================
-* Installing
-  Step-by-step instructions for installing the project on supported platforms.
-
-  This section may contain the Prerequisites.
-
-  In general, this should be a quick overview of the installation process,
-  with a link to docs/man/README.md.
-============================================================================ -->
-
-## Installing
-
-Quick summary of installation instructions, or link to the Installing documentation.
-
-<!-- ========================================================== [INSTALLING] -->
-
-<!-- [USAGE] ===================================================================
-* Usage
-  Step-by-step instructions for using the project on supported platforms.
-  Remove OS sections that are not supported.
-
-  In general, this should be a quick overview of the usage process,
-  with a link to docs/man/README.md.
-============================================================================ -->
-
-<!-- [SETUP] ===================================================================
-* Setup
-  Step-by-step instructions for setting up the project on supported platforms.
-  Remove OS sections that are not supported.
-
-  In general, this should be a quick overview of the setup process,
-  with a link to docs/man/README.md.
-============================================================================ -->
-
-<!-- =============================================================== [SETUP] -->
-
-## Usage
-
-Step-by-step instructions for using the project on supported platforms.
-
-<!-- =============================================================== [USAGE] -->
-
-<!-- [DOCUMENTATION] ===========================================================
-* Documentation
-  A quick overview of the documentation.
-============================================================================ -->
-
-## Documentation
-
-Documentation is available.
-
-<!-- ======================================================= [DOCUMENTATION] -->
-
-<!-- [ACKNOWLEDGEMENTS] ========================================================
-* Acknowledgements
-  List of acknowledgements, or remove this section if there are none.
-============================================================================ -->
-
-## Acknowledgements
-
-None.
-
-<!-- ==================================================== [ACKNOWLEDGEMENTS] -->
-
-<!-- [RELATED PROJECTS] ========================================================
-* Related projects
-  List of related projects, or remove this section if there are none.
-============================================================================ -->
-
-## Built with
-
-* [Technology or framework](URL)  - Role it plays in the project.
-* [Technology or framework](URL)  - Role it plays in the project.
-* [Technology or framework](URL)  - Role it plays in the project.
-
-## Related projects
-
-None.
-
-<!-- ==================================================== [RELATED PROJECTS] -->
-
-<!-- [LICENSE] =================================================================
-* License
-  The license under which the project is distributed.
-============================================================================ -->
-
-## License
-
-Distributed under the [Apache 2.0 License](LICENSE).  
-Copyright &copy; 2026 %Owner%
-
-<!-- ============================================================= [LICENSE] -->
-
----
-
-<!-- [HORIZONTAL MENU] =========================================================
-* Horizontal menu (bottom)
-  Contains components that aren't in/don't belong in the table of contents.
----------------------------------------------------------------------------- -->
-
-<h6 align="center">
-
-  [FAQ](docs/FAQ.md)&nbsp;&bull;&nbsp;[DEVELOPMENT](docs/DEVELOPMENT.md)&nbsp;&bull;&nbsp;[API](docs/api/README.md)&nbsp;&bull;&nbsp;[TESTING](docs/TESTING.md)&nbsp;&bull;&nbsp;[SUPPORT](docs/SUPPORT.md)&nbsp;&bull;&nbsp;[NOTICES](docs/NOTICES.md)
-  
-</h6>
-
-<!-- ===================================================== [HORIZONTAL MENU] -->
-
----
-
-<sub>Last updated: 260718</sub>
+## Topic #3
