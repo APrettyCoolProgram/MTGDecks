@@ -148,6 +148,16 @@ Use this structure as the page scaffold; omit only conditional Cover Art and Key
 
 <div align="center">
 
+[Overview](#overview) • [Decklist](#decklist) • %KeyCardsTocIfAny%[Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
+</div>
+
+***
+
+## Overview
+
+<div align="center">
+
 | Deck |  |
 |:--|:--|
 | Archetype | %Archetype% |
@@ -157,16 +167,6 @@ Use this structure as the page scaffold; omit only conditional Cover Art and Key
 | Legalities | %Legalities% |
 
 </div>
-
-<div align="center">
-
-[Overview](#overview) • [Decklist](#decklist) • %KeyCardsTocIfAny%[Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
-
-</div>
-
-***
-
-## Overview
 
 %Overview%
 
