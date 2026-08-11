@@ -1,4 +1,4 @@
-<!-- Last updated 2026-07-18 -->
+<!-- Last updated 2026-08-11 -->
 # Adventure ⚪🔵
 
 > Blue-white Adventure tempo deck that turns every creature into flexible interaction, pressure, or combat leverage before winning through evasive threats and large late-game bodies.
@@ -21,13 +21,13 @@
 
 <div align="center">
 
-|Deck||
+| Deck |  |
 |:--|:--|
-|Archetype|Azorius Adventure Tempo|
-|Colors|White/Blue|
-|Strategy|Cast Adventure halves for tempo, protection, counters, and combat swings, then deploy the creature halves as sustained pressure|
-|Win Condition(s)|Evasive Faeries, tapped-down blockers, pumped attacks, and late-game creatures like Guardian Naga and Sword Coast Serpent|
-|Legalities|Historic/Timeless/Legacy/Vintage|
+| Archetype | Azorius Adventure Tempo |
+| Colors | ⚪🔵 |
+| Strategy | Cast Adventure halves for tempo, protection, counters, and combat swings, then deploy the creature halves as sustained pressure |
+| Win Condition(s) | Evasive Faeries, tapped-down blockers, pumped attacks, and late-game creatures like Guardian Naga and Sword Coast Serpent |
+| Legalities | Historic/Timeless/Legacy/Vintage |
 
 </div>
 

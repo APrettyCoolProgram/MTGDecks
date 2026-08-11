@@ -1,6 +1,6 @@
 <!--
     MTG markdown page agent instructions for Magic: the Gathering deck pages.
-    R26.7+180902
+    R26.8
 -->
 
 ---
@@ -128,7 +128,9 @@ Include:
 
 Write 1-2 short paragraphs with concrete upgrade or tuning ideas.
 
-Add a required collapsible `<details>` section titled `Sideboard Guide`. If sideboard recommendations are provided or requested, each recommendation must contain exactly 15 legal cards and only card lists, with no commentary. If the source deck has no sideboard and no recommendations are requested, state that no sideboard is listed in the source deck rather than inventing one.
+Add a required collapsible `<details>` section titled `Sideboard Guide`. 
+
+Add 2-3 sideboard recommendations, each must contain exactly 15 legal cards and only card lists, with no commentary. If the source deck has no sideboard and no recommendations are requested, state that no sideboard is listed in the source deck rather than inventing one.
 
 ### Versions
 
