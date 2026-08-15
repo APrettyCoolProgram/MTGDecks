@@ -8,11 +8,14 @@
 
 </div>
 
-* [Adventure](Decks/Adventure.mtg.md)
-* [Angrath's Revenge](Decks/Angraths-Revenge.mtg.md)
-* [Azorius Birds](Decks/AzoriusBirds.mtg.md)
-* [Captain Lannery Storm](Decks/Captain-Lannery-Storm.mtg.md)
-* [Creature Killer](Decks/Creature-Killer.mtg.md)
-* [Giant Invasion](Decks/Giant-Invasion.mtg.md)
-* [Quakebringer](Decks/Quakebringer.mtg.md)
-* [Wurmpocalypse](Decks/Wurmpocalypse.mtg.md)
+
+|     |    |
+|:---:|:---|
+|⚪🔵 |[Adventure](Decks/Adventure.mtg.md)  |
+|🔴⚫ |[Angrath's Revenge](Decks/Angraths-Revenge.mtg.md)  |
+|⚪🔵 |[Azorius Birds](Decks/AzoriusBirds.mtg.md)  |
+|🔴⚫ |[Captain Lannery Storm](Decks/Captain-Lannery-Storm.mtg.md)  |
+|🔴 |[Creature Killer](Decks/Creature-Killer.mtg.md)  |
+|🔵🔴 |[Giant Invasion](Decks/Giant-Invasion.mtg.md)  |
+|🔴 |[Quakebringer](Decks/Quakebringer.mtg.md)  |
+|⚫🟢 |[Wurmpocalypse](Decks/Wurmpocalypse.mtg.md)  |
