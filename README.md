@@ -17,6 +17,6 @@
 ⚪🔵 [Azorius Birds](/Decks/AzoriusBirds.mtg.md)  
 ⚫🔴 [Captain Lannery Storm](/Decks/CaptainLanneryStorm.mtg.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴 [Creature Killer](/Decks/CreatureKiller.mtg.md)  
-🔵🔴 [Giant Invasion](/Decks/Giant-Invasion.mtg.md)  
+🔵🔴 [Giant Invasion](/Decks/GiantInvasion.mtg.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴 [Quakebringer](/Decks/Quakebringer.mtg.md)  
-⚫🟢 [Wurmpocalypse](/Decks/Wurmpocalypse.mtg.md)
+⚫🟢 [Wurmpocolypse](/Decks/Wurmpocolypse.mtg.md)
