@@ -1,6 +1,6 @@
 <!-- Last updated 2026-07-18 -->
 
-[❰ Back to Decks](/Decks/README.md)
+[❰ Back to Decks](../README.md)
 
 # Quakebringer 🔴
 

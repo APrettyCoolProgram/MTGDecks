@@ -1,6 +1,6 @@
 <!-- Last updated 2026-08-11 -->
 
-[❰ Back to Decks](/Decks/README.md)
+[❰ Back to Decks](../README.md)
 
 # Giant Invasion 🔵🔴
 
