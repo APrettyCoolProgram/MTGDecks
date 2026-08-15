@@ -15,7 +15,7 @@
 ⚪🔵 [Adventure](/Decks/Adventure.mtg.md)  
 ⚫🔴 [Angrath's Revenge](/Decks/AngrathsRevenge.mtg.md)  
 ⚪🔵 [Azorius Birds](/Decks/AzoriusBirds.mtg.md)  
-⚫🔴 [Captain Lannery Storm](/Decks/Captain-Lannery-Storm.mtg.md)  
+⚫🔴 [Captain Lannery Storm](/Decks/CaptainLanneryStorm.mtg.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴 [Creature Killer](/Decks/CreatureKiller.mtg.md)  
 🔵🔴 [Giant Invasion](/Decks/Giant-Invasion.mtg.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔴 [Quakebringer](/Decks/Quakebringer.mtg.md)  
