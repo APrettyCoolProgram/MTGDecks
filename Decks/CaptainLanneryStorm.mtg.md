@@ -1,5 +1,5 @@
 <!-- Last updated 2026-08-11 -->
-# Captain Lannery Storm 🔴⚫
+# Captain Lannery Storm ⚫🔴
 
 > Rakdos Pirates leans on raid, Treasure, and aggressive curve-topper synergies to keep pressure high while Captain Lannery Storm and the crew turn every attack into extra damage and mana.
 
@@ -24,7 +24,7 @@
 | Deck |  |
 |:--|:--|
 | Archetype | Rakdos Pirates |
-| Colors | 🔴⚫ |
+| Colors | ⚫🔴 |
 | Strategy | Attack early, enable raid, generate Treasure, and convert every combat step into damage, tempo, or a bigger follow-up threat |
 | Win Condition(s) | Fast combat damage, Dire Fleet Neckbreaker pump turns, Treasure-fueled Captain Lannery Storm attacks, and stolen creatures from Captivating Crew |
 | Legalities | Historic / Timeless / Pioneer / Modern / Legacy / Vintage |
@@ -164,8 +164,8 @@ Against decks with strong blockers, the best line is often to use Shock and atta
 | 0 |  | 0 | 0% | - |
 | 1 | # | 16 | 44.4% | 🔴 |
 | 2 | # | 2 | 5.6% | ⚫ |
-| 3 | ### | 5 | 13.9% | 🔴⚫ |
-| 4 | ########### | 11 | 30.6% | 🔴⚫ |
+| 3 | ### | 5 | 13.9% | ⚫🔴 |
+| 4 | ########### | 11 | 30.6% | ⚫🔴 |
 | 5 | ## | 2 | 5.6% | 🔴 |
 | 6 |  | 0 | 0% | - |
 | 7 |  | 0 | 0% | - |
@@ -174,8 +174,8 @@ Against decks with strong blockers, the best line is often to use Shock and atta
 
 | Color | # | % |
 |:--:|:--:|:--:|
-| 🔴 | 31 | 86.1% |
 | ⚫ | 9 | 25.0% |
+| 🔴 | 31 | 86.1% |
 
 <details>
 <summary>Additional mana details</summary>

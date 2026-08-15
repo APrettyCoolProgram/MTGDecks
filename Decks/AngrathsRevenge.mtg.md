@@ -1,5 +1,5 @@
 <!-- Last updated 2026-08-11 -->
-# Angrath's Revenge 🔴⚫
+# Angrath's Revenge ⚫🔴
 
 > Rakdos Angrath piles together removal, burn, and Minotaur pressure so every turn can clear a blocker, force a discard, or push damage toward a bigger payoff.
 
@@ -26,7 +26,7 @@
 | Deck |  |
 |:--|:--|
 | Archetype | Rakdos Angrath Midrange |
-| Colors | 🔴⚫ |
+| Colors | ⚫🔴 |
 | Strategy | Use efficient removal and discard effects to keep the board clear, then pressure life totals with aggressive Minotaurs and Angrath payoffs |
 | Win Condition(s) | Combat damage, repeated burn and discard, Angrath's loyalty abilities, and Moraug or Treachery turns that steal tempo |
 | Legalities | Not evaluated |
@@ -170,20 +170,20 @@ Modal double-faced cards are counted by their front-face spell type in the main 
 | Mana Value | Mana Cost | # | % | Color |
 |:--:|:--|:--|:--|:--|
 | 0 |  | 0 | 0% | - |
-| 1 | # | 2 | 5.6% | 🔴 |
-| 2 | ##### | 9 | 25.0% | 🔴⚫ |
+| 1 | # | 2 | 5.6% | ⚫🔴 |
+| 2 | ##### | 9 | 25.0% | ⚫🔴 |
 | 3 | ####### | 7 | 19.4% | ⚫🔴 |
-| 4 | ######## | 8 | 22.2% | 🔴⚫ |
-| 5 | ### | 3 | 8.3% | 🔴⚫ |
-| 6 | ####### | 7 | 19.4% | 🔴⚫ |
+| 4 | ######## | 8 | 22.2% | ⚫🔴 |
+| 5 | ### | 3 | 8.3% | ⚫🔴 |
+| 6 | ####### | 7 | 19.4% | ⚫🔴 |
 | 7 |  | 0 | 0% | - |
 
 ### Colors
 
 | Color | # | % |
 |:--:|:--:|:--:|
-| 🔴 | 32 | 88.9% |
 | ⚫ | 16 | 44.4% |
+| 🔴 | 32 | 88.9% |
 
 <details>
 <summary>Additional mana details</summary>
