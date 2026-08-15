@@ -1,4 +1,7 @@
 <!-- Last updated 2026-08-11 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Adventure ⚪🔵
 
 > Blue-white Adventure tempo deck that turns every creature into flexible interaction, pressure, or combat leverage before winning through evasive threats and large late-game bodies.

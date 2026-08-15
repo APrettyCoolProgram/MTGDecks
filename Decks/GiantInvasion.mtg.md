@@ -1,4 +1,7 @@
 <!-- Last updated 2026-08-11 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Giant Invasion 🔵🔴
 
 > Izzet Giants uses cost reduction, tempo interaction, and oversized threats to turn every turn into a giant-sized swing before closing with burn, combat damage, or a reset from the top end.

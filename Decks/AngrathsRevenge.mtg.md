@@ -1,4 +1,7 @@
 <!-- Last updated 2026-08-11 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Angrath's Revenge ⚫🔴
 
 > Rakdos Angrath piles together removal, burn, and Minotaur pressure so every turn can clear a blocker, force a discard, or push damage toward a bigger payoff.

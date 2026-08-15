@@ -1,4 +1,7 @@
 <!-- Last updated 2026-07-18 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Quakebringer 🔴
 
 > Mono-red Giant burn deck that doubles damage with Calamity Bearer, keeps opponents from gaining life, and closes with Quakebringer triggers and resilient threats.

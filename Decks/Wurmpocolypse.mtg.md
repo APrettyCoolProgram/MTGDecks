@@ -1,4 +1,7 @@
 <!-- Last updated 2026-07-18 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Wurmpocolypse ⚫🟢
 
 > Golgari Wurm ramp deck that accelerates into oversized tramplers, token engines, and Massacre Wurm punishment to overwhelm creature boards.

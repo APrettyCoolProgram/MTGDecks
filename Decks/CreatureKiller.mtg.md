@@ -1,4 +1,7 @@
 <!-- Last updated 2026-07-18 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Creature Killer 🔴
 
 > This aggressive red deck focuses on burning down opponents quickly with direct damage spells and explosive synergies.

@@ -1,4 +1,7 @@
 <!-- Last updated 2026-08-11 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Azorius Birds ⚪🔵
 
 > This deck utilizes the synergistic strengths of White and Blue to control the battlefield, stabilize against aggressive strategies, and win through superior card advantage and resilient flying threats.

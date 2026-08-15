@@ -1,4 +1,7 @@
 <!-- Last updated 2026-08-11 -->
+
+[❰ Back to Decks](/Decks/README.md)
+
 # Captain Lannery Storm ⚫🔴
 
 > Rakdos Pirates leans on raid, Treasure, and aggressive curve-topper synergies to keep pressure high while Captain Lannery Storm and the crew turn every attack into extra damage and mana.
