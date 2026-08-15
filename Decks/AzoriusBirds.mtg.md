@@ -1,13 +1,22 @@
-<!-- Last updated 2026-08-11 -->
+<!-- markdownlint-disable MD033 MD041 MD060 -->
+<!-- Last updated 2026-08-15 -->
 
 [❰ Back to Decks](../README.md)
 
 # Azorius Birds ⚪🔵
 
-> This deck utilizes the synergistic strengths of White and Blue to control the battlefield, stabilize against aggressive strategies, and win through superior card advantage and resilient flying threats.
+> Azorius Birds curves out with cheap flyers, then turns the whole board into a fast aerial clock with anthem effects, disruption, and a small amount of top-end value.
+
+<table align="center">
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/b/a/ba0ec2d2-c004-4f6b-ba1c-29d81ad77fd1.webp?1783933002" alt="Warden of Evos Isle" width="240" /></td>
+</tr>
+</table>
 
 <div align="center">
-[Overview](#overview) • [Decklist](#decklist) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
+[Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
 </div>
 
 ***
@@ -16,19 +25,19 @@
 
 <div align="center">
 
-| Deck | |
+| Deck |  |
 |:--|:--|
-| Archetype | Midrange Control |
-| Colors | White, Blue |
-| Strategy | Tempo and Disruption |
-| Win Condition(s) | Overwhelming aerial presence and card advantage. |
+| Archetype | Azorius Flying Tempo |
+| Colors | ⚪🔵 |
+| Strategy | Build early air pressure, protect it with light interaction, and scale small flyers into real threats |
+| Win Condition(s) | Evasive combat damage backed by Empyrean Eagle, Warden of Evos Isle, and extra-turn finishers |
 | Legalities | Not evaluated |
 
 </div>
 
-This Azorius Birds deck aims to control the early game by leveraging disruption spells like Jwari Disruption and Pacifism. By stabilizing the board and mitigating opponent threats, it allows its resilient flyers and key value creatures, such as Warden of Evos Isle and Empyrean Eagle, to take over the mid-to-late game.
+Azorius Birds is built to make its smallest creatures matter. Healer's Hawk, Battlefield Raptor, Silver Raven, and the other early flyers come down quickly, then get amplified by Empyrean Eagle and Warden of Evos Isle so they stop being filler bodies and start presenting real lethal pressure.
 
-The deck's distinctiveness lies in its ability to pivot between proactive threat deployment and reactive control, ensuring that even when facing aggressive decks, it can weather the storm and eventually outpace its opponent with superior resources.
+The deck does not try to win on raw card advantage. Instead, it stays ahead on board, uses Pacifism and Jwari Disruption to buy time, and turns every flying creature draw into more damage in the air. Alrund's Epiphany gives the list a clean way to convert an established board into a closing turn.
 
 ## Decklist
 
@@ -62,48 +71,55 @@ The deck's distinctiveness lies in its ability to pivot between proactive threat
 
 ## Key Cards
 
-<div align="center">
-<!-- Placeholder for Scryfall image URL for Healer's Hawk -->
-[Healer's Hawk Image Placeholder](scryfall_url/healers_hawk) 
-<!-- Placeholder for Scryfall image URL for Empyrean Eagle -->
-[Empyrean Eagle Image Placeholder](scryfall_url/empyrean_eagle) 
-<!-- Placeholder for Scryfall image URL for Warden of Evos Isle -->
-[Warden of Evos Isle Image Placeholder](scryfall_url/warden_of_evos_isle)
-</div>
-
-*   **Healer's Hawk**: Provides early evasive pressure and acts as a consistent threat throughout the game.
-*   **Empyrean Eagle**: A powerful late-game flying threat that can close out games when combined with board presence.
-*   **Warden of Evos Isle**: Serves as a durable, resilient flyer capable of maintaining pressure across multiple turns.
+<table align="center">
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/3/3/3313bd5c-b657-47a3-822a-dd0d9165492a.webp?1783934201" alt="Healer's Hawk" width="120" /></td>
+<td>Early lifelink pressure that scales well with the deck's flying payoffs.</td>
+</tr>
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/5/7/577e99a7-4a55-4314-8f08-2ae0c33b85c7.webp?1783909053" alt="Empyrean Eagle" width="120" /></td>
+<td>Main anthem effect that turns every flier into a credible attacker.</td>
+</tr>
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/b/a/ba0ec2d2-c004-4f6b-ba1c-29d81ad77fd1.webp?1783933002" alt="Warden of Evos Isle" width="120" /></td>
+<td>Cost reduction that lets the deck double-spell and rebuild the board faster.</td>
+</tr>
+</table>
 
 ## Game Plan
 
-The primary game plan revolves around establishing an early defensive posture using disruption spells and stabilizing the mana base. Once threats are controlled, the deck transitions into a tempo-oriented midgame, deploying efficient flyers and value creatures. The ultimate win condition is achieved by leveraging board control to ensure that the resilient Azorius birds outpace and overwhelm any remaining opposition.
+The ideal start is simple: deploy a cheap flyer, keep the opponent from stabilizing, and keep attacking. The deck plays best when it can sequence an early threat into an anthem or tempo piece, because that makes every later draw immediately relevant.
+
+Once the board is established, the deck shifts from chip damage to inevitability. Empyrean Eagle and Warden of Evos Isle let small bodies punch above their weight, while A-Alrund's Epiphany and the larger Birds give the list a way to end games that have gone long.
 
 <details>
 <summary>Detailed Strategy</summary>
 <br>
 
-The core synergy lies in using Pacifism and Jwari Disruption to remove opposing threats while keeping our own board stable for flyers like Warden of Evos Isle. Augury Raven provides early card filtering, allowing us to find key interaction or threat pieces sooner. Aven Gagglemaster helps maintain value when facing smaller creatures. The goal is not necessarily a fast combo, but rather attrition—wearing down the opponent while building an unassailable aerial presence. Matchup considerations suggest prioritizing disruption against aggressive red decks and leveraging board control against combo strategies.
+The early turns are about sticking evasive bodies and forcing awkward blocks. Healer's Hawk and Battlefield Raptor are the cleanest openers, Silver Raven helps smooth draws, and Jwari Disruption protects the board from the first key spell that would reset the pace.
+
+Empyrean Eagle is the most important payoff because it turns every flying token, Bird, and incidental attacker into real damage. Warden of Evos Isle makes the curve feel lower than it is, which matters in a deck with several four- and five-mana flyers. When the game slows down, A-Alrund's Epiphany is the cleanest way to convert a board lead into a finishing swing.
+
+The support cards all point in the same direction. Pacifism answers the creature that matters most, Aerial Assault rewards flying density, and Love Song of Night and Day adds both selection and another Bird token. The deck is strongest when it keeps attacking rather than holding back to play defense for too long.
 
 </details>
 
 ## Details
 
-### Cards Table
-
 <div align="center">
+
 | Card Type | Count | Percentage |
-| :--- | :---: | :---: |
-| Non-land cards | 32 | 78% |
-| Creatures | 26 | 64% |
-| Sorceries | 5 | 12% |
-| Instants | 3 | 7% |
-| Artifacts | 0 | 0% |
-| Enchantments | 0 | 0% |
-| Land cards | 8 | 22% |
-| Non-basic lands | 12 | - |
-| Basic lands | 5 | - |
-| Total cards | 40 | 100% |
+|:--|:--:|:--:|
+| Total non-land cards | 36 | 60.0% |
+| Creatures | 26 | 43.3% |
+| Sorceries | 3 | 5.0% |
+| Instants | 2 | 3.3% |
+| Artifacts | 2 | 3.3% |
+| Enchantments | 5 | 8.3% |
+| Land cards | 24 | 40.0% |
+| Non-basic lands | 8 | 13.3% |
+| Basic lands | 16 | 26.7% |
+| Total cards | 60 | 100.0% |
 
 </div>
 
@@ -111,7 +127,7 @@ The core synergy lies in using Pacifism and Jwari Disruption to remove opposing 
 <summary>Additional card details</summary>
 <br>
 
-<!-- Placeholder for detailed card tables (rarity, types, etc.) -->
+This list is heavily creature-dense, and most of the noncreature slots either protect a lead or turn flyers sideways more profitably. The highest concentration of cards sits at mana values 1-3, which is what makes the deck feel proactive instead of clunky.
 
 </details>
 
@@ -120,24 +136,25 @@ The core synergy lies in using Pacifism and Jwari Disruption to remove opposing 
 ### Curve
 
 <div align="center">
+
 | Mana Value | Count | Percentage |
-| :---: | :---: | :---: |
-| 1 | 8 | 20% |
-| 2 | 7 | 18% |
-| 3 | 5 | 12% |
-| 4 | 6 | 15% |
-| 5+ | 6 | 15% |
+|:--:|:--:|:--:|
+| 1 | 6 | 16.7% |
+| 2 | 10 | 27.8% |
+| 3 | 11 | 30.6% |
+| 4 | 5 | 13.9% |
+| 5+ | 4 | 11.1% |
 
 </div>
 
 ### Colors
 
 <div align="center">
+
 | Color | Count | Percentage |
-| :---: | :---: | :---: |
-| White (⚪) | 20 | 50% |
-| Blue (🔵) | 12 | 30% |
-| Other | 0 | 0% |
+|:--:|:--:|:--:|
+| White (⚪) | 22 | 61.1% |
+| Blue (🔵) | 14 | 38.9% |
 
 </div>
 
@@ -145,13 +162,17 @@ The core synergy lies in using Pacifism and Jwari Disruption to remove opposing 
 <summary>Additional mana details</summary>
 <br>
 
-The curve is balanced, providing early interaction and threats while maintaining enough late-game power with the higher mana cost cards. The inclusion of dual lands (Hengegate Pathway) helps ensure color fixing across the board.
+The curve is front-loaded, which helps the deck start attacking before slower opponents are ready. Hengegate Pathway and the utility lands give it enough fixing to support double-spell turns without leaning too hard on either color.
+
+The blue cards are concentrated in the middle and top of the curve, while the white cards carry most of the one- and two-drop pressure. That split matches the deck's plan: establish white-based board presence early, then use blue to keep tempo and finish with stronger flyers.
 
 </details>
 
 ## Thoughts
 
-To further tune this deck, consider increasing the density of removal spells to better handle specialized creature types, or adding more card draw engines to sustain pressure in longer games. Testing different combinations of disruption and threat pieces could also optimize its midrange presence.
+The cleanest upgrade path is to decide whether the deck wants to stay purely tempo-oriented or lean harder into tribal payoff. If the goal is speed, trimming one of the slower five-mana flyers for another cheap evasive creature would make the deck more consistent.
+
+If the goal is resilience, the deck could use one more piece of interaction that cleanly answers noncreature problems or a source of card flow that does not slow down combat. Right now the list is strongest when it keeps attacking, so any additions should help it preserve that pace.
 
 <details>
 <summary>Sideboard Guide</summary>
@@ -168,6 +189,7 @@ No sideboard is listed in the source deck.
 <br>
 
 ```text
+[260718]
 Deck
 7 Plains (UST) 212
 4 Healer's Hawk (GRN) 14

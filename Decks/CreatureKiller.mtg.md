@@ -1,21 +1,22 @@
-<!-- Last updated 2026-07-18 -->
+<!-- markdownlint-disable MD033 MD041 MD060 -->
+<!-- Last updated 2026-08-15 -->
 
 [❰ Back to Decks](../README.md)
 
 # Creature Killer 🔴
 
-> This aggressive red deck focuses on burning down opponents quickly with direct damage spells and explosive synergies.
+> Creature Killer is a mono-red burn deck that clears the board with efficient damage spells and then finishes the game by pointing the last few damage sources at the opponent.
+
+<table align="center">
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/3/a/3adc0288-acdf-4a99-9bfb-919cae1aeb69.webp?1783931053" alt="Blazing Volley" width="240" /></td>
+</tr>
+</table>
 
 <div align="center">
-  <table width="240" style="border-collapse: collapse;">
-    <tr>
-      <td style="text-align: center; padding: 10px;"><img src="[Scryfall Image URL for Blazing Volley (IKO) 107]" alt="Blazing Volley" width="240"/></td>
-    </tr>
-  </table>
-</div>
 
-<div align="center">
 [Overview](#overview) • [Decklist](#decklist) • [Key Cards](#key-cards) • [Game Plan](#game-plan) • [Details](#details) • [Mana](#mana) • [Thoughts](#thoughts) • [Versions](#versions)
+
 </div>
 
 ***
@@ -26,15 +27,17 @@
 
 | Deck |  |
 |:--|:--|
-| Archetype | Aggro/Burn |
-| Colors | Red 🔴 |
-| Strategy | Direct damage and aggressive tempo plays. |
-| Win Condition(s) | Reducing opponent life to zero through spell damage. |
-| Legalities | Not evaluated (Data unavailable) |
+| Archetype | Mono-Red Burn |
+| Colors | 🔴 |
+| Strategy | Use cheap burn and sweepers to keep the battlefield clear while pushing damage to the face |
+| Win Condition(s) | Direct damage from efficient burn spells and mass damage effects |
+| Legalities | Not evaluated |
 
 </div>
 
-This deck is built around maximizing direct damage output with cheap, efficient spells like Lightning Strike and Shivan Fire. It aims to establish an aggressive presence early in the game and close out the match before the opponent can stabilize or develop a counter-strategy. The inclusion of Snow-Covered Mountain provides necessary mana consistency for this red burn package.
+This list is built to trade efficiently at the lowest possible mana values. Blazing Volley, Shock, Frost Bite, Dual Shot, and Mutiny all punish small creatures early, while Lightning Strike, Jaya's Greeting, Slaying Fire, and Demon Bolt convert that board control into reach.
+
+The deck is at its best when it can turn each draw into immediate damage. Snow-Covered Mountain keeps Frost Bite live, and the foretell spells give the list a little flexibility on turns where it wants to spend mana now and convert tempo later.
 
 ## Decklist
 
@@ -58,50 +61,55 @@ This deck is built around maximizing direct damage output with cheap, efficient 
 
 ## Key Cards
 
-<div align="center">
-  <table width="120" style="border-collapse: collapse;">
-    <tr>
-      <td style="text-align: center; padding: 10px;"><img src="[Scryfall Image URL for Demon Bolt (KHM) 129]" alt="Demon Bolt" width="120"/></td>
-      <td>* Finishes off key targets or creatures.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; padding: 10px;"><img src="[Scryfall Image URL for Lightning Strike (DMU) 137]" alt="Lightning Strike" width="120"/></td>
-      <td>* Versatile removal and burn spell.</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; padding: 10px;"><img src="[Scryfall Image URL for Jaya's Greeting (WAR) 136]" alt="Jaya's Greeting" width="120"/></td>
-      <td>* Provides aggressive advantage and card advantage.</td>
-    </tr>
-  </table>
-</div>
+<table align="center">
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/5/f/5f856b0e-b413-49b0-9aa7-d935ad40ae53.webp?1783928232" alt="Demon Bolt" width="120" /></td>
+<td>Flexible removal that becomes cheaper and more efficient when foretold.</td>
+</tr>
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/7/d/7d541125-bfb8-4f88-8bf3-ad7b6af7ad1d.webp?1783921313" alt="Lightning Strike" width="120" /></td>
+<td>Clean reach spell that can finish creatures or go upstairs.</td>
+</tr>
+<tr>
+<td><img src="https://cards.scryfall.io/display/front/e/c/ec66f169-5cf9-4d7c-a5ab-c64fc4801358.webp?1783933426" alt="Jaya's Greeting" width="120" /></td>
+<td>Efficient creature removal with scry to smooth the next draw.</td>
+</tr>
+</table>
 
 ## Game Plan
 
-The primary game plan is to apply immediate pressure using cheap spells like Lightning Strike and Shivan Fire while building up a board presence with creatures, if any are present (though this list appears focused on direct damage). The goal is rapid resource deployment and sustained burn.
+The early plan is straightforward: keep the opponent's board from developing and spend each turn converting mana into damage. Small creature decks get punished by Blazing Volley, Frost Bite, Dual Shot, and Shock, while larger threats can be handled by Lava Coil, Slaying Fire, and Demon Bolt.
+
+Once the board is under control, the deck shifts into pure reach mode. Lightning Strike and Jaya's Greeting keep the opponent under pressure, Storm's Wrath resets wide boards, and Dual Strike or foretold removal can create efficient double-spell turns that end the game quickly.
 
 <details>
 <summary>Detailed Strategy</summary>
 <br>
 
-The deck relies heavily on hitting the opponent's life total early. Key synergies involve using mana to deploy multiple damage sources in a single turn, leveraging cards like Dual Strike or Shivan Fire for high-impact bursts. Matchups against control decks require careful sequencing of removal and burn spells, while aggressive matchups demand prioritizing maximum damage output immediately.
+The burn suite is split between one-mana pressure and slightly larger removal so the deck can adapt to both small and midrange creatures. Shock, Dual Shot, and Frost Bite are the fastest plays, while Lava Coil, Slaying Fire, and Demon Bolt handle threats that survive the cheap spells.
+
+The foretell cards matter because they let the deck bank mana on turns where it cannot spend everything efficiently. Dual Strike is especially useful after a setup turn, since copying a follow-up burn spell can turn a medium damage sequence into a lethal one.
+
+Underworld Fires and Storm's Wrath are the slowest cards in the list, but they give the deck real reset buttons when the board gets too large for one-for-one burn. Against token decks and creature swarms, that mass damage is often what keeps the red deck from falling behind.
 
 </details>
 
 ## Details
 
 <div align="center">
-| Metric | Count/Percentage |
-|:--|:--|
-| Total non-land cards | 20 / 54% |
-| Total creatures | Not evaluated |
-| Total sorceries | 17 / 38% |
-| Total instants | 3 / 7% |
-| Total artifacts | Not evaluated |
-| Total enchantments | Not evaluated |
-| Total land cards | 24 / 54% |
-| Total non-basic lands | 0 / 0% |
-| Total basic lands | 24 / 100% |
-| Total cards | 44 / 100% |
+
+| Card Type | Count | Percentage |
+|:--|:--:|:--:|
+| Total non-land cards | 41 | 63.1% |
+| Creatures | 0 | 0.0% |
+| Sorceries | 16 | 24.6% |
+| Instants | 25 | 38.5% |
+| Artifacts | 0 | 0.0% |
+| Enchantments | 1 | 1.5% |
+| Land cards | 24 | 36.9% |
+| Non-basic lands | 0 | 0.0% |
+| Basic lands | 24 | 36.9% |
+| Total cards | 65 | 100.0% |
 
 </div>
 
@@ -109,7 +117,7 @@ The deck relies heavily on hitting the opponent's life total early. Key synergie
 <summary>Additional card details</summary>
 <br>
 
-*Rarity and Type Breakdown:* (Data unavailable from source)
+The deck is almost entirely removal and reach, with no creatures at all. That makes every spell draw high leverage, but it also means the list depends on sequencing cleanly so it does not spend too many resources answering the wrong threat.
 
 </details>
 
@@ -118,24 +126,23 @@ The deck relies heavily on hitting the opponent's life total early. Key synergie
 ### Curve
 
 <div align="center">
-| MV | Count | Percentage |
-|:--|:--|:--|
-| 1 | 4 | 18% |
-| 2 | 7 | 32% |
-| 3 | 6 | 27% |
-| 4 | 3 | 14% |
-| 5+ | Not evaluated | 9% |
+
+| Mana Value | Count | Percentage |
+|:--:|:--:|:--:|
+| 1 | 20 | 48.8% |
+| 2 | 15 | 36.6% |
+| 3 | 4 | 9.8% |
+| 4 | 2 | 4.9% |
 
 </div>
 
 ### Colors
 
 <div align="center">
+
 | Color | Count | Percentage |
-|:--|:--|:--|
-| Red 🔴 | 20 / 45% |
-| Green 🟢 | 4 / 9% |
-| Other | Not evaluated | 36% |
+|:--:|:--:|:--:|
+| Red (🔴) | 41 | 100.0% |
 
 </div>
 
@@ -143,19 +150,23 @@ The deck relies heavily on hitting the opponent's life total early. Key synergie
 <summary>Additional mana details</summary>
 <br>
 
-The deck is heavily reliant on red mana. The land base (24 Snow-Covered Mountain) provides basic consistency, but the presence of Lava Coil suggests potential needs for green or other color fixing that isn't fully addressed in the current structure.
+The curve is extremely low, which is exactly what a burn deck wants. Most turns can be spent using all available mana, and the deck has enough one- and two-mana plays to keep pressure up even after a reset.
+
+Snow-Covered Mountain is the real mana consideration here because it turns on Frost Bite's snow bonus. The list does not need fixing, but it does benefit from keeping the snow count high enough that Frost Bite is rarely just a two-damage spell.
 
 </details>
 
 ## Thoughts
 
-To improve this aggressive strategy, consider increasing the density of high-impact 1-cost spells to ensure early pressure is maintained regardless of the opponent's opening hand. Experimenting with more flexible removal options outside of pure burn could provide better answers against non-creature threats.
+If this deck wants to hit harder against slower strategies, the most obvious upgrade path is more direct face damage and fewer cards that only interact with creatures. The current list is excellent at answering board states, but it can sometimes spend too many resources on defense instead of closing.
+
+If the goal is to improve creature matchups, keep the current removal density and consider adding more efficient sweepers or flexible burn that scales better into the midgame. The deck already has a strong low curve, so the best changes are the ones that preserve that speed.
 
 <details>
 <summary>Sideboard Guide</summary>
 <br>
 
-No sideboard was listed in the source deck, and no recommendations were requested.
+No sideboard is listed in the source deck.
 
 </details>
 
