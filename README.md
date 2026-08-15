@@ -6,6 +6,8 @@
     <img alt="Fallback image description" src=".github/logo/light/256x256/MTGDecks.png">
   </picture>
 
+  <h1>MTG Decks</h1>
+
 </div>
 
 <!-- W-U-B-R-G -->
